@@ -1,0 +1,45 @@
+<h3>API Table</h3>
+<table>
+  <thead>
+    <tr>
+      <td><b>Name</b></td>
+      <td><b>Email</b></td>
+      <td><b>PhoneNo</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of customers">
+      <td>{{ item.name }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.phone }}</td>
+    </tr>
+  </tbody>
+</table>
+<br /><br />
+<h4>Post API Table</h4>
+<form #register="ngForm" (ngSubmit)="postData(register.value)">
+  <br />
+  <input type="text" placeholder="Text here" />
+  <br />
+  <input type="text" placeholder="Password" />
+  <br />
+  <input type="text" placeholder="Email" />
+  <br />
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<!--<app-header></app-header>
+<app-register></app-register>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<app-child [item]="data"></app-child>
+<button>click</button><br />
+<button class="btn btn-primary">Click Here</button>
+<app-secondary></app-secondary>-->
+
+<!--<app-login></app-login>
+
+<a routerLink="">Home</a>
+<a routerLink="forms">Forms</a>
+<router-outlet></router-outlet>
+<app-task></app-task>-->

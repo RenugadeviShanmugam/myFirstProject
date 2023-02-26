@@ -1,0 +1,8 @@
+.row {
+  background-color: darkgrey;
+  padding: 15px;
+  min-height: 100px;
+}
+.error-msg {
+  color: red;
+}

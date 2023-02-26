@@ -1,0 +1,90 @@
+{
+  "uuid": "3d73d55d-9bb4-4996-be1c-fb0f28fa3bc5",
+  "lastMigration": 24,
+  "name": "Mockapi",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3002,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "8676cc80-cce2-4b97-972b-ccfe07a755d3",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/customer",
+      "responses": [
+        {
+          "uuid": "4da7eecb-a8b1-42cd-8e56-7931ad0d2437",
+          "body": "[\n  {\n    \"name\": \"Renugadevi\",\n    \"email\": \"renu@gmail.com\",\n    \"phone\": \"123456789\"\n  },\n  {\n    \"name\": \"viji\",\n    \"email\": \"viji@gmail.com\",\n    \"phone\": \"123654789\"\n  },\n  {\n    \"name\": \"Tamilselvi\",\n    \"email\": \"tamil@gmail.com\",\n    \"phone\": \"123653339\"\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "9yn9",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "6af3b367-9bcc-41fc-9138-5199bc46da89",
+      "id": "9yn9",
+      "name": "New data",
+      "documentation": "",
+      "value": "vfg\nkjj\nnjk\n"
+    }
+  ]
+}

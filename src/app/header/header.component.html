@@ -1,0 +1,42 @@
+<p>Header works!</p>
+<p>{{ title }}</p>
+<p>{{ 10 + 5 }}</p>
+<p>{{ 100 <= 10 }}</p>
+<button (click)="getData(100)">Click Here</button>
+<br /><br />
+<input #inputtxt placeholder="Type Here" (keyup)="gettxtData(inputtxt.value)" />
+<p>Entered Text : {{ enttxt }}</p>
+<button (click)="getNo('plus')">++</button>
+<input value="{{ countertxt }}" />
+<button (click)="getNo('minus')">--</button>
+<br /><br />
+<input #input1 value="{{ title }}" placeholder="Type1" /><!-- Interpolation -->
+<input #input2 [value]="title" placeholder="Type2" /><!--Property binding-->
+<h3>conditional statement</h3>
+<h3 *ngIf="boolData; else elsest">If condition is True</h3>
+<ng-template #elsest>
+  <h3>Else Statement</h3>
+</ng-template>
+<!--ngFor looping-->
+<h3>ngFor statement</h3>
+<ul>
+  <li *ngFor="let item of userList">{{ item.location }}</li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Salary</td>
+      <td>Location</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of userList">
+      <td>{{ item.name }}</td>
+      <td>{{ item.salary }}</td>
+      <td>{{ item.location }}</td>
+    </tr>
+  </tbody>
+</table>
+<!--style binding-->
+<h2 [style.color]="color" [style.font-size]="font">Welcome to Angular</h2>

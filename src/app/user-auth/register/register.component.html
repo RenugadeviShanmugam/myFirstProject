@@ -1,0 +1,82 @@
+<p>Basic Form</p>
+<form #basicform="ngForm" (submit)="getformData(basicform.value)">
+  <input ngModel type="text" name="username" />
+  <br />
+  <input ngModel type="text" name="email" />
+  <br />
+  <input ngModel type="text" name="phoneno" />
+  <br />
+  <button>Submit</button>
+</form>
+<div>
+  <ul>
+    <li>{{ dataobj.username }}</li>
+    <li>{{ dataobj.email }}</li>
+    <li>{{ dataobj.phoneno }}</li>
+  </ul>
+</div>
+<button (click)="toggle()">Toggle</button>
+<h2 *ngIf="show">Have a nice Day</h2>
+<br />
+<h3>Two way Binding</h3>
+<input placeholder="Type here" [(ngModel)]="datavalue" />
+<p>Enter Text : {{ datavalue }}</p>
+<input type="text" [(ngModel)]="name" />
+<p>{{ name }}</p>
+<!--forms
+<div class="container">
+  <h3 style="text-align: center">Template Registration Form</h3>
+
+  <form #register="ngForm" (submit)="getdata(register.value)">
+    <div class="row">
+      <div class="offset-lg-3 col-lg-6">
+        <label class="form-label">Name</label>
+        <input
+          class="form-label"
+          type="text"
+          name="name"
+          autocomplete="off"
+          ngModel
+        />
+        <span class="error-msg">Please enter valid data</span>
+      </div>
+      <div class="offset-lg-3 col-lg-6">
+        <label class="form-label">Password</label>
+        <input
+          class="form-label"
+          type="password"
+          name="password"
+          autocomplete="off"
+          ngModel
+        />
+        <span class="error-msg">Please enter valid data</span>
+      </div>
+      <div class="offset-lg-3 col-lg-6">
+        <label class="form-label">Email</label>
+        <input
+          class="form-label"
+          type="text"
+          name="email"
+          autocomplete="off"
+          ngModel
+        />
+        <span class="error-msg">Please enter valid data</span>
+      </div>
+      <div class="offset-lg-3 col-lg-6">
+        <label class="form-label">phoneno</label>
+        <input
+          class="form-label"
+          type="text"
+          name="phone"
+          autocomplete="off"
+          ngModel
+        />
+        <span class="error-msg">Please enter valid data</span>
+      </div>
+      <div class="offset-lg-3 col-lg-6">
+        <br />
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>-->

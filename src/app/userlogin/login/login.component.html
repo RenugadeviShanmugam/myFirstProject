@@ -1,0 +1,77 @@
+<p>Form works!</p>
+<div class="container">
+  <h3 style="text-align: center">Template Registration Form</h3>
+
+  <form #register="ngForm" (submit)="getdata(register.value)">
+    <div class="row">
+      <div class="offset-lg-4 col-lg-4">
+        <label class="form-label">Name</label>
+        <input
+          required
+          minlength="5"
+          class="form-control"
+          type="text"
+          name="name"
+          #name="ngModel"
+          autocomplete="off"
+          ngModel
+        />
+        <span *ngIf="name.invalid && name.touched" class="error-msg"
+          >Please enter valid data</span
+        >
+      </div>
+      <div class="offset-lg-4 col-lg-4">
+        <label class="form-label">Password</label>
+        <input
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+          class="form-control"
+          type="password"
+          name="password"
+          #password="ngModel"
+          autocomplete="off"
+          ngModel
+        />
+        <span *ngIf="password.invalid && password.touched" class="error-msg"
+          >Please enter valid data</span
+        >
+      </div>
+      <div class="offset-lg-4 col-lg-4">
+        <label class="form-label">Email</label>
+        <input
+          required
+          class="form-control"
+          type="text"
+          name="email"
+          #email="ngModel"
+          autocomplete="off"
+          ngModel
+        />
+        <span *ngIf="email.invalid && email.touched" class="error-msg"
+          >Please enter valid data</span
+        >
+      </div>
+      <div class="offset-lg-4 col-lg-4">
+        <label class="form-label">PhoneNo</label>
+        <input
+          required
+          class="form-control"
+          type="text"
+          name="phone"
+          #phoneno="ngModel"
+          autocomplete="off"
+          ngModel
+        />
+        <span *ngIf="phoneno.invalid && phoneno.touched" class="error-msg"
+          >Please enter valid data</span
+        >
+      </div>
+      <div class="offset-lg-4 col-lg-6">
+        <br />
+        <button [disabled]="register.invalid" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

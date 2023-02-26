@@ -1,0 +1,56 @@
+<h2>React Form</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" style="align-items: center"></div>
+    <div class="col-lg-4" style="background-color: rgba(246, 152, 29, 0.618)">
+      <form [formGroup]="register" (ngSubmit)="getData()">
+        <br />
+        <input
+          type="text"
+          class="formcontrol"
+          placeholder="Text here"
+          formControlName="name"
+        /><br />
+        <span
+          *ngIf="vname && vname.invalid && vname.touched"
+          style="color: rgb(143, 3, 3)"
+          >Enter Valid Data</span
+        >
+        <br />
+        <input
+          type="text"
+          class="formcontrol"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <br />
+        <span
+          *ngIf="vpassword && vpassword.invalid && vpassword.touched"
+          style="color: rgb(143, 3, 3)"
+          >Enter Valid Data</span
+        >
+        <br />
+        <input
+          type="text"
+          class="formcontrol"
+          placeholder="Email"
+          formControlName="email"
+        />
+        <br />
+        <span
+          *ngIf="vemail && vemail.invalid && vemail.touched"
+          style="color: rgb(143, 3, 3)"
+          >Enter Valid Data</span
+        >
+        <br /><br />
+        <button
+          [disabled]="register.invalid"
+          type="submit"
+          class="btn btn-primary"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
